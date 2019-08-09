@@ -1,0 +1,30 @@
+<div ng-controller="PurchaseOrderController">
+        <div class="container">
+                <br>
+                <div class="text-center">
+                    <h1>{{title}}</h1>
+                </div>
+                <br>
+                <!-- <div>
+                    <button type="button" ng-class="showFlag ? 'btn btn-danger' : 'btn btn-success'" ng-click="toggleShowInventory()">{{ btnLabel }}</button>
+                </div> -->
+            <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Receipt Number</th>
+                            <th>Date Created</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in purchaseOrders">
+                        <td>
+                            <a href="#!/purchase/{{item.id}}">
+                                {{item.receiptNumber}}
+                            </a>
+                        </td>
+                        <td>{{item.dateCreated | date: longDate }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+    

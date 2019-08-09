@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include Angular JS -->
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-route/angular-route.min.js"></script>
+
+        <!-- Include Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body ng-app="inventoryApp">
+            <nav class="navbar nav-pills navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+                <div class="container">        
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li>
+                            <a class="navbar-brand">Inventory App</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#!/" role="tab" aria-controls="pills-home" aria-selected="true">Purchase Order</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#!/inventory" role="tab" aria-controls="pills-profile" aria-selected="false">Inventory</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        <div class="main justify-content-center">
+            <div ng-view></div>
+        </div>
+        <!-- Module Dependencies -->
+        <script src="js/app.js"></script>
+        <!-- Controller Dependencies -->
+        <script src="js/controller/InventoryController.js"></script>
+        <script src="js/controller/ViewInventoryController.js"></script>
+        <script src="js/controller/PurchaseOrderController.js"></script>
+        <script src="js/controller/ViewPurchaseOrderController.js"></script>
+        <!-- Service Dependencies -->
+        <script src="js/service/InventoryService.js"></script>
+        <script src="js/service/PurchaseOrderService.js"></script>
+        <!-- Directive Dependencies -->
+        <script src="js/directive/InventoryInfo.js"></script>
+        <script src="js/directive/PurchaseInfo.js"></script>
+    </body>
+</html>

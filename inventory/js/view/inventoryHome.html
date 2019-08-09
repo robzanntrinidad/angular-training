@@ -1,0 +1,33 @@
+<div ng-controller="InventoryController">
+    <div class="container">
+            <br>
+            <div class="text-center">
+                <h1>{{title}}</h1>
+            </div>
+            <br>
+            <!-- <div>
+                <button type="button" ng-class="showFlag ? 'btn btn-danger' : 'btn btn-success'" ng-click="toggleShowInventory()">{{ btnLabel }}</button>
+            </div> -->
+        <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Order Date</th>
+                        <th>Purchase Order</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="sample in inventories">
+                    <td>
+                        <a href="#!/inventory/{{sample.id}}">
+                            {{sample.name}}
+                        </a>
+                    </td>
+                    <td>{{sample.price | currency:"PHP " }}</td>
+                    <td>{{sample.dateCreated | date: longDate }}</td>
+                    <td><a href='#!/purchase/{{sample.purchaseOrder.id}}'>{{sample.purchaseOrder.receiptNumber}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>

@@ -1,0 +1,15 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "Sample inventory system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robzann Trinidad",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-route": "^1.7.8"
+  }
+}
